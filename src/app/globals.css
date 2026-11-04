@@ -36,3 +36,13 @@
  .hero-portrait .portrait-image{object-position:58% center}
  .hero:after{background:linear-gradient(90deg,rgba(10,10,10,.82),rgba(10,10,10,.42) 65%,rgba(10,10,10,.12)),linear-gradient(0deg,rgba(10,10,10,.55),transparent 55%)}
 }
+
+/* Keep the original two-line name layout over the full-bleed hero */
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;flex:1;position:relative;z-index:2}
+.hero-copy{position:relative;left:auto;top:auto;right:auto;transform:none;padding-left:2%;max-width:none;align-self:center}
+.hero-portrait{z-index:0}
+@media(max-width:650px){
+ .hero-grid{display:grid;grid-template-columns:1fr;align-items:center;flex:1;position:relative;padding-top:18px}
+ .hero-copy{position:relative;left:auto;right:auto;top:auto;transform:none;padding-left:5px;max-width:none;align-self:center}
+ .hero-portrait{position:absolute;inset:0;width:100%;height:100%;min-height:0}
+}
