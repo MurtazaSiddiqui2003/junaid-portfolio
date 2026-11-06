@@ -90,3 +90,7 @@
  .graphic-cards>.graphic-image{flex-basis:68vw}
  .gallery-next{width:36px;height:36px;right:5px}
 }
+
+/* Restore the supplied brand mark in the navigation and blend its white canvas into the dark header */
+.logo-image-link{display:flex;align-items:center;flex:none;line-height:0}
+.site-header .brand-logo{mix-blend-mode:darken;object-position:center;}
