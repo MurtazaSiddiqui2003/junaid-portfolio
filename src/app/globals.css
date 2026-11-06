@@ -66,3 +66,27 @@
 .preview-technical{height:min(70vh,650px);display:grid;place-items:center;background:#242220;color:#eee8e1}
 .preview-technical .jacket{height:90%;width:auto;max-width:90%}
 @media(max-width:650px){.hero-copy{padding-left:6%}.preview-modal{padding:14px}.preview-dialog{padding:14px;max-height:92vh}.preview-full-image{max-height:78vh}.preview-hint{right:7px;bottom:7px;padding:6px 7px;font-size:6px}}
+
+/* Mobile-specific hero artwork */
+.mobile-hero-image{display:none;object-fit:cover;object-position:center center;z-index:-2}
+@media(max-width:650px){.hero-portrait .portrait-image{display:none}.hero-portrait .mobile-hero-image{display:block}}
+/* JS monogram replaces the previous SJS shorthand */
+.logo{font:500 29px 'Playfair Display';letter-spacing:-2px}
+/* Square, horizontally scrollable work rails */
+.gallery-wrap{position:relative;min-width:0}
+.mosaic{display:flex;gap:12px;height:auto;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;padding:2px 2px 12px}
+.mosaic::-webkit-scrollbar,.graphic-cards::-webkit-scrollbar{display:none}
+.mosaic>.preview-tile,.mosaic>.mosaic-type{flex:0 0 clamp(190px,22vw,260px);aspect-ratio:1/1;height:auto;scroll-snap-align:start}
+.mosaic-portrait,.mosaic-sketch{min-width:0}
+.mosaic-type{min-width:0}
+.graphic-cards{display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;padding:2px 2px 12px}
+.graphic-cards>.graphic-image{flex:0 0 clamp(170px,19vw,230px);height:auto;aspect-ratio:1/1;scroll-snap-align:start}
+.graphic-image{min-width:0}
+.gallery-next{position:absolute;right:8px;top:50%;transform:translateY(-50%);z-index:5;width:42px;height:42px;border:1px solid rgba(255,255,255,.8);background:rgba(15,15,15,.82);color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 3px 18px #0003}
+.gallery-next:hover{background:var(--red)}
+.graphic-gallery .gallery-next{right:8px}
+@media(max-width:650px){
+ .mosaic>.preview-tile,.mosaic>.mosaic-type{flex-basis:72vw}
+ .graphic-cards>.graphic-image{flex-basis:68vw}
+ .gallery-next{width:36px;height:36px;right:5px}
+}
