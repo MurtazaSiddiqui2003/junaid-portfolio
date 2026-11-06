@@ -93,7 +93,7 @@
 
 /* Restore the supplied brand mark in the navigation and blend its white canvas into the dark header */
 .logo-image-link{display:flex;align-items:center;flex:none;line-height:0}
-.site-header .brand-logo{mix-blend-mode:darken;object-position:center;}
+.site-header .brand-logo{object-position:center;background:#eee8e1;padding:3px;mix-blend-mode:normal;}
 
 /* Subtly rounded corners on the navbar brand mark */
 .site-header .brand-logo{border-radius:8px;}
